@@ -1,6 +1,6 @@
 {
   "name": "choose-randomly-by-ratio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Choose randomly a value by ratio",
   "main": "index.js",
   "scripts": {
