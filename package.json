@@ -1,0 +1,29 @@
+{
+  "name": "choice-randomly-by-ratio",
+  "version": "1.0.0",
+  "description": "Find a value randomly by ratio",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjirou/choice-randomly-by-ratio.git"
+  },
+  "keywords": [
+    "random",
+    "ratio"
+  ],
+  "author": "kjirou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjirou/choice-randomly-by-ratio/issues"
+  },
+  "homepage": "https://github.com/kjirou/choice-randomly-by-ratio",
+  "devDependencies": {
+    "jshint": "2.6.3",
+    "mocha": "2.2.1",
+    "sinon": "1.13.0"
+  }
+}
