@@ -1,7 +1,11 @@
 var assert = require('assert');
+var rewire = require('rewire');
 var sinon = require('sinon');
 
 var chooseRandomlyByRatio = require('../index');
+
+
+var rewiredModule = rewire('../index.js');
 
 
 describe('choose-randomly-by-ratio', function() {
@@ -25,6 +29,17 @@ describe('choose-randomly-by-ratio', function() {
     });
   });
 
+
+  it('_isArray', function() {
+    var _isArray = rewiredModule.__get__('_isArray');
+    assert(_isArray([1, 2]));
+    assert(_isArray([]));
+    assert(!_isArray({}));
+    assert(!_isArray(1));
+    assert(!_isArray('str'));
+    assert(!_isArray(null));
+    assert(!_isArray(undefined));
+  });
 
   it('createValueGenerator', function() {
     var generator = createValueGenerator([0.2, 0.5, 0.8]);

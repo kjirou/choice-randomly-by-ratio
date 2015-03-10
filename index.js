@@ -1,3 +1,9 @@
+var _isArray = function(any) {
+  return Object.prototype.toString.call(any) === '[object Array]';
+};
+var isArray = Array.isArray || _isArray;
+
+
 /**
  * Choose randomly a value by ration from collection
  *
@@ -15,7 +21,7 @@
  * @return choiced value
  */
 module.exports = function chooseRandomlyByRatio(collection) {
-  if (!Array.isArray(collection)) {
+  if (!isArray(collection)) {
     var collection_ = [];
     for (var k in collection) {
       collection_.push([k, collection[k]]);
