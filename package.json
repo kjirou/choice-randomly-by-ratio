@@ -1,7 +1,7 @@
 {
   "name": "choose-randomly-by-ratio",
   "version": "1.0.1",
-  "description": "Find a value randomly by ratio",
+  "description": "Choose randomly a value by ratio",
   "main": "index.js",
   "scripts": {
     "lint": "jshint index.js",
