@@ -11,7 +11,7 @@ Choose randomly a value by ratio from collection
 ```
 var chooseRandomlyByRatio = require('choose-randomly-by-ratio');
 
-// This value will be 'x'(1/4.5) or 'y'(1.5/4.5) or 'z'(2.0/4.5)
+// This value will be 'x'(1.0/4.5) or 'y'(1.5/4.5) or 'z'(2.0/4.5)
 var value = chooseRandomlyByRatio([['x', 1], ['y', 1.5], ['z', 2]]);
 
 // It's possible to write like this
