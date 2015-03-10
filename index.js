@@ -1,5 +1,5 @@
 /**
- * Find a value randomly from collection by ratio
+ * Choose randomly a value by ration from collection
  *
  * @example
  *
@@ -14,7 +14,7 @@
  * @param {object|Array} collection A collection of value with ratio
  * @return choiced value
  */
-module.exports = function findRandomlyByRatio(collection) {
+module.exports = function chooseRandomlyByRatio(collection) {
   if (!Array.isArray(collection)) {
     var collection_ = [];
     for (var k in collection) {
@@ -29,7 +29,7 @@ module.exports = function findRandomlyByRatio(collection) {
   });
 
   if (totalRatio <= 0 || isNaN(totalRatio)) {
-    throw new Error('findRandomlyByRatio was given invalid collection');
+    throw new Error('chooseRandomlyByRatio was given invalid collection');
   }
 
   var roll = Math.random() * totalRatio;

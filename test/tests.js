@@ -1,10 +1,10 @@
 var assert = require('assert');
 var sinon = require('sinon');
 
-var findRandomlyByRatio = require('../index');
+var chooseRandomlyByRatio = require('../index');
 
 
-describe('find-randomly-by-ratio', function() {
+describe('choose-randomly-by-ratio', function() {
 
   var createValueGenerator = function createValueGenerator(values) {
     var currentIdx = -1;
@@ -41,7 +41,7 @@ describe('find-randomly-by-ratio', function() {
 
     var results = [];
     values.forEach(function() {
-      results.push(findRandomlyByRatio([['x', 1], ['y', 2]]));
+      results.push(chooseRandomlyByRatio([['x', 1], ['y', 2]]));
     });
 
     assert.deepEqual(results, ['x', 'x', 'x', 'x', 'y', 'y', 'y', 'y', 'y', 'y']);
@@ -54,7 +54,7 @@ describe('find-randomly-by-ratio', function() {
 
     var results = [];
     values.forEach(function() {
-      results.push(findRandomlyByRatio({x: 1, y: 2}));
+      results.push(chooseRandomlyByRatio({x: 1, y: 2}));
     });
 
     assert.deepEqual(results, ['x', 'x', 'x', 'x', 'y', 'y', 'y', 'y', 'y', 'y']);
@@ -67,7 +67,7 @@ describe('find-randomly-by-ratio', function() {
 
     var results = [];
     values.forEach(function() {
-      results.push(findRandomlyByRatio([['x', 1], ['y', 2], ['z', 3]]));
+      results.push(chooseRandomlyByRatio([['x', 1], ['y', 2], ['z', 3]]));
     });
 
     assert.deepEqual(results, ['x', 'x', 'y', 'y', 'y', 'z', 'z', 'z', 'z', 'z']);
@@ -75,11 +75,11 @@ describe('find-randomly-by-ratio', function() {
 
   it('should throw error in invalid cases', function() {
     assert.throws(function() {
-      findRandomlyByRatio({x: -3, y: 2});
-    }, /findRandomlyByRatio/);
+      chooseRandomlyByRatio({x: -3, y: 2});
+    }, /chooseRandomlyByRatio/);
 
     assert.throws(function() {
-      findRandomlyByRatio(['x', 'not_a_number']);
-    }, /findRandomlyByRatio/);
+      chooseRandomlyByRatio(['x', 'not_a_number']);
+    }, /chooseRandomlyByRatio/);
   });
 });
